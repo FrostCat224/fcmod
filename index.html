@@ -65,58 +65,43 @@
 
     <p>(home)</p>
 
-    <input
-      type="text"
-      id="search"
-      placeholder="Search games..."
-    />
-
+    <input type="text" id="search" placeholder="Search..." />
 
     <div class="filters" id="filters"></div>
 
+    <div id="stuff"></div>
 
-    <div id="games"></div>
-      
-<!-- game lijst                   game lijst                    game lijst  -->
-  
     <script>
-      const games = [
+      const stuff = [
         {
           name: "Super Mario 64",
-          link: "/html/sm64",
+          link: "/html/sm64.html",
           system: "N64"
         },
-
         {
-          name: "Pokemon Emerald",
-          link: "https://example.com/pokemonemerald",
-          system: "GBA"
+          name: "2048",
+          link: "/html/2048.html",
+          system: "HTML5"
         },
-
         {
-          name: "Tetris",
-          link: "https://example.com/tetris",
-          system: "GB"
+          name: "3Dash",
+          link: "/html/3dash.html",
+          system: "HTML5"
         },
-
         {
-          name: "Mario Kart DS",
-          link: "https://example.com/mariokartds",
-          system: "DS"
+          name: "Alex Kidd in Miracle World",
+          link: "/html/alexkidd.html",
+          system: "Sega Master System"
         },
-
         {
-          name: "Kirby Nightmare in Dream Land",
-          link: "https://example.com/kirby",
-          system: "GBA"
+          name: "Vex",
+          link: "/html/vex.html",
+          system: "Flash"
         }
       ];
 
-
-
       const filtersDiv = document.getElementById("filters");
-
-      const systems = [...new Set(games.map(game => game.system))];
+      const systems = [...new Set(stuff.map(item => item.system))];
 
       systems.forEach(system => {
         const label = document.createElement("label");
@@ -129,12 +114,11 @@
         filtersDiv.appendChild(label);
       });
 
-
-      const gamesDiv = document.getElementById("games");
+      const stuffDiv = document.getElementById("stuff");
       const searchInput = document.getElementById("search");
 
-      function renderGames() {
-        gamesDiv.innerHTML = "";
+      function renderStuff() {
+        stuffDiv.innerHTML = "";
 
         const search = searchInput.value.toLowerCase();
 
@@ -142,40 +126,45 @@
           ...document.querySelectorAll(".filters input:checked")
         ].map(box => box.value);
 
-        const filteredGames = games.filter(game => {
+        const filteredStuff = stuff.filter(item => {
           const matchesSearch =
-            game.name.toLowerCase().includes(search);
+            item.name.toLowerCase().includes(search);
 
           const matchesSystem =
-            enabledSystems.includes(game.system);
+            enabledSystems.includes(item.system);
 
           return matchesSearch && matchesSystem;
         });
 
-        filteredGames.forEach(game => {
+        filteredStuff.forEach(item => {
           const button = document.createElement("a");
 
           button.className = "rainbow-button";
-          button.href = game.link;
+          button.href = item.link;
           button.target = "_blank";
 
           button.textContent =
-            `${game.name} [${game.system}]`;
+            `${item.name} [${item.system}]`;
 
-          gamesDiv.appendChild(button);
+          stuffDiv.appendChild(button);
         });
       }
 
-      searchInput.addEventListener("input", renderGames);
+      searchInput.addEventListener("input", renderStuff);
 
       document
         .querySelectorAll(".filters input")
         .forEach(box => {
-          box.addEventListener("change", renderGames);
+          box.addEventListener("change", renderStuff);
         });
 
-
-      renderGames();
+      renderStuff();
     </script>
+
+    <p>I do not own anything in this site.</p>
+    <p>
+      If you'd like to contact me for copyright issues,
+      e-mail to frostcat224@gmail.com and I will remove whatever you own from this site.
+    </p>
   </body>
 </html>
