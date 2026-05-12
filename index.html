@@ -75,29 +75,79 @@
       const stuff = [
         {
           name: "Super Mario 64",
-          link: "/html/sm64.html",
+          link: "fcmod/html/sm64.html",
           system: "N64"
         },
         {
           name: "2048",
-          link: "/html/2048.html",
+          link: "fcmod/html/2048.html",
           system: "HTML5"
         },
         {
           name: "3Dash",
-          link: "/html/3dash.html",
+          link: "fcmod/html/3dash.html",
           system: "HTML5"
         },
         {
           name: "Alex Kidd in Miracle World",
-          link: "/html/alexkidd.html",
+          link: "fcmod/html/alexkidd.html",
           system: "Sega Master System"
         },
         {
           name: "Vex",
-          link: "/html/vex.html",
+          link: "fcmod/html/vex.html",
           system: "Flash"
-        }
+        },
+        {
+          name: "Super Mario 63 Redux",
+          link: "fcmod/html/sm63redux.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex 2",
+          link: "fcmod/html/vex2.html",
+          system: "Flash"
+        },
+        {
+          name: "Vex 3",
+          link: "fcmod/html/vex3.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex 4",
+          link: "fcmod/html/vex4.html",
+          system: "HTML5"
+        },
+        {
+          name: "Trees hate you",
+          link: "fcmod/html/treeshateyou.html",
+          system: "HTML5"
+        },
+        {
+          name: "Polytrack",
+          link: "fcmod/html/polytrack.html",
+          system: "HTML5"
+        },
+        {
+          name: "Polytrack (Old)",
+          link: "fcmod/html/polytrackold.html",
+          system: "HTML5"
+        },
+        {
+          name: "Grindcraft",
+          link: "fcmod/html/grindcraft.html",
+          system: "HTML5"
+        },
+        {
+          name: "Little Alchemy 2",
+          link: "fcmod/html/littlealchemy2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Game and Watch Collection",
+          link: "fcmod/html/gamewatchcollection.html",
+          system: "Game Boy/GBA/GBC"
+        },
       ];
 
       const filtersDiv = document.getElementById("filters");
@@ -144,7 +194,7 @@
           button.target = "_blank";
 
           button.textContent =
-            `${item.name} [${item.system}]`;
+            `${item.name}`;
 
           stuffDiv.appendChild(button);
         });
