@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fcmod</title>
 
     <style>
@@ -10,6 +10,29 @@
         background: black;
         color: white;
         font-family: Verdana;
+      }
+
+      h1 {
+        margin-bottom: 5px;
+      }
+
+      input {
+        background: black;
+        color: white;
+        border: 2px solid white;
+        padding: 10px;
+        font-family: Verdana;
+        width: 300px;
+        margin-bottom: 10px;
+      }
+
+      .filters {
+        margin-bottom: 20px;
+      }
+
+      .filters label {
+        margin-right: 15px;
+        display: inline-block;
       }
 
       .rainbow-button {
@@ -39,21 +62,120 @@
 
   <body>
     <h1>fcmod</h1>
-    
+
     <p>(home)</p>
-    <p> </p>
-    <p> </p>
 
-    <a class="rainbow-button" href="https://frostcat224.github.io/fcmod/html/index.html" target="_blank">
-      html
-    </a>
+    <input
+      type="text"
+      id="search"
+      placeholder="Search games..."
+    />
 
-    <a class="rainbow-button" href="https://frostcat224.github.io/fcmod/html/emulator.html" target="_blank">
-      emulator
-    </a>
 
-    <a class="rainbow-button" href="https://frostcat224.github.io/fcmod/html/mods.html" target="_blank">
-      mods
-    </a>
+    <div class="filters" id="filters"></div>
+
+
+    <div id="games"></div>
+      
+<!-- game lijst                   game lijst                    game lijst  -->
+  
+    <script>
+      const games = [
+        {
+          name: "Super Mario 64",
+          link: "/html/sm64",
+          system: "N64"
+        },
+
+        {
+          name: "Pokemon Emerald",
+          link: "https://example.com/pokemonemerald",
+          system: "GBA"
+        },
+
+        {
+          name: "Tetris",
+          link: "https://example.com/tetris",
+          system: "GB"
+        },
+
+        {
+          name: "Mario Kart DS",
+          link: "https://example.com/mariokartds",
+          system: "DS"
+        },
+
+        {
+          name: "Kirby Nightmare in Dream Land",
+          link: "https://example.com/kirby",
+          system: "GBA"
+        }
+      ];
+
+
+
+      const filtersDiv = document.getElementById("filters");
+
+      const systems = [...new Set(games.map(game => game.system))];
+
+      systems.forEach(system => {
+        const label = document.createElement("label");
+
+        label.innerHTML = `
+          <input type="checkbox" value="${system}" checked>
+          ${system}
+        `;
+
+        filtersDiv.appendChild(label);
+      });
+
+
+      const gamesDiv = document.getElementById("games");
+      const searchInput = document.getElementById("search");
+
+      function renderGames() {
+        gamesDiv.innerHTML = "";
+
+        const search = searchInput.value.toLowerCase();
+
+        const enabledSystems = [
+          ...document.querySelectorAll(".filters input:checked")
+        ].map(box => box.value);
+
+        const filteredGames = games.filter(game => {
+          const matchesSearch =
+            game.name.toLowerCase().includes(search);
+
+          const matchesSystem =
+            enabledSystems.includes(game.system);
+
+          return matchesSearch && matchesSystem;
+        });
+
+        filteredGames.forEach(game => {
+          const button = document.createElement("a");
+
+          button.className = "rainbow-button";
+          button.href = game.link;
+          button.target = "_blank";
+
+          button.textContent =
+            `${game.name} [${game.system}]`;
+
+          gamesDiv.appendChild(button);
+        });
+      }
+
+      searchInput.addEventListener("input", renderGames);
+
+      document
+        .querySelectorAll(".filters input")
+        .forEach(box => {
+          box.addEventListener("change", renderGames);
+        });
+
+
+      renderGames();
+    </script>
   </body>
 </html>
