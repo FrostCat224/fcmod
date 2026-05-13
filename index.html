@@ -481,6 +481,8 @@
         },
       ];
 
+      stuff.sort((a, b) => a.name.localeCompare(b.name));
+
       const filtersDiv = document.getElementById("filters");
       const systems = [...new Set(stuff.map(item => item.system))];
 
