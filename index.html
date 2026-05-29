@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+can you add images above the text in games, that are always the same size, that only appear if there is there is <Game Name>.png in the folder Images? <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -144,7 +144,7 @@ button:hover {
     <div class="topbar">
   <div>
     <img src="https://frostcat224.github.io/fcmod/logo - Benterdecool Games.png". alt=Logo width=600 height=60>
-
+    <p>(home)</p>
   </div>
 
   <form id="contactForm">
@@ -664,37 +664,17 @@ document.addEventListener("click", (e) => {
         });
 
         filteredStuff.forEach(item => {
-  const wrapper = document.createElement("div");
-  wrapper.style.display = "inline-block";
-  wrapper.style.textAlign = "center";
-  wrapper.style.margin = "5px";
+          const button = document.createElement("a");
 
-  // IMAGE
-  const img = document.createElement("img");
-  img.src = `Images/${item.name}.png`;
-  img.style.width = "120px";
-  img.style.height = "80px";
-  img.style.objectFit = "cover";
-  img.style.display = "block";
-  img.style.marginBottom = "6px";
+          button.className = "rainbow-button";
+          button.href = item.link;
+          button.target = "_blank";
 
-  // hide image if it doesn't exist
-  img.onerror = () => {
-    img.style.display = "none";
-  };
+          button.textContent =
+            `${item.name}`;
 
-  // BUTTON
-  const button = document.createElement("a");
-  button.className = "rainbow-button";
-  button.href = item.link;
-  button.target = "_blank";
-  button.textContent = item.name;
-
-  wrapper.appendChild(img);
-  wrapper.appendChild(button);
-
-  stuffDiv.appendChild(wrapper);
-});
+          stuffDiv.appendChild(button);
+        });
       }
 
       searchInput.addEventListener("input", renderStuff);
