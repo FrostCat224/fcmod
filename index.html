@@ -664,17 +664,37 @@ document.addEventListener("click", (e) => {
         });
 
         filteredStuff.forEach(item => {
-          const button = document.createElement("a");
+  const wrapper = document.createElement("div");
+  wrapper.style.display = "inline-block";
+  wrapper.style.textAlign = "center";
+  wrapper.style.margin = "5px";
 
-          button.className = "rainbow-button";
-          button.href = item.link;
-          button.target = "_blank";
+  // IMAGE
+  const img = document.createElement("img");
+  img.src = `Images/${item.name}.png`;
+  img.style.width = "120px";
+  img.style.height = "80px";
+  img.style.objectFit = "cover";
+  img.style.display = "block";
+  img.style.marginBottom = "6px";
 
-          button.textContent =
-            `${item.name}`;
+  // hide image if it doesn't exist
+  img.onerror = () => {
+    img.style.display = "none";
+  };
 
-          stuffDiv.appendChild(button);
-        });
+  // BUTTON
+  const button = document.createElement("a");
+  button.className = "rainbow-button";
+  button.href = item.link;
+  button.target = "_blank";
+  button.textContent = item.name;
+
+  wrapper.appendChild(img);
+  wrapper.appendChild(button);
+
+  stuffDiv.appendChild(wrapper);
+});
       }
 
       searchInput.addEventListener("input", renderStuff);
