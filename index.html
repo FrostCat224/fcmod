@@ -6,6 +6,42 @@
     <title>benterdecool gaming</title>
 
     <style>
+      .search-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-dropdown {
+  position: relative;
+}
+
+#filterButton {
+  height: 46px;
+}
+
+.filters {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: black;
+  border: 2px solid white;
+  padding: 10px;
+  min-width: 220px;
+  z-index: 1000;
+}
+
+.filters.show {
+  display: block;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
       body {
   background: url("https://frostcat224.github.io/fcmod/1567666.png") no-repeat center / cover;
   color: white;
@@ -107,10 +143,31 @@ button:hover {
   </form>
 </div>
 
-    <input type="text" id="search" placeholder="Search..." />
+    <div class="search-row">
+  <input type="text" id="search" placeholder="Search..." />
+
+  <div class="filter-dropdown">
+    <button id="filterButton">Filters ▼</button>
 
     <div class="filters" id="filters"></div>
+  </div>
+</div>
 
+    <script>
+      const filterButton = document.getElementById("filterButton");
+
+filterButton.addEventListener("click", () => {
+  filtersDiv.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    !e.target.closest(".filter-dropdown")
+  ) {
+    filtersDiv.classList.remove("show");
+  }
+});
+    </script>
     <div id="stuff"></div>
 
     <script>
