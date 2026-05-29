@@ -559,6 +559,25 @@
       renderStuff();
     </script>
 
+    <form id="contactForm">
+  <input type="text" id="message" placeholder="Type a message..." required>
+  <button type="submit">What game should Benter add:</button>
+</form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const message = document.getElementById("message").value;
+
+  window.location.href =
+    "mailto:jansenbenter@gmail.com?subject=Message&body=" +
+    encodeURIComponent(message);
+
+  document.getElementById("message").value = "";
+});
+</script>
+
     <p>All these games’ rights go to their respective owners. We do not claim to own any of these games.</p>
     <p>
       Contact: jansenbenter@gmail.com
