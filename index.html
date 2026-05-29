@@ -773,3 +773,14 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     Q: Is this site great? A: Yes.
   </p>
 </details>
+    <p> </p>
+<div id="counter">Loading...</div>
+
+<script>
+fetch("https://api.counterapi.dev/v1/benterdecool/pageviews/up")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("counter").innerText =
+      "Visitors: " + data.count;
+  });
+</script>
