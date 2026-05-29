@@ -6,6 +6,18 @@
     <title>benterdecool.nl</title>
 
     <style>
+      .footer-info {
+  margin-top: 30px;
+  background: black;
+  border: 2px solid white;
+  padding: 10px;
+  width: fit-content;
+}
+
+.footer-info summary {
+  cursor: pointer;
+  font-weight: bold;
+}
       .search-row {
   display: flex;
   align-items: flex-start;
@@ -676,12 +688,20 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 });
 </script>
 
-    <p>All these games’ rights go to their respective owners. We do not claim to own any of these games.</p>
-    <p>
-      Contact: jansenbenter@gmail.com
-    </p>
-    <p>
-      This website is Benter Jansen's property, and he is responsible for it.
-    </p>
-  </body>
-</html>
+<details class="footer-info">
+  <summary>Info & Contact ▼</summary>
+
+  <p>
+    All these games’ rights go to their respective owners.
+    We do not claim to own any of these games.
+  </p>
+
+  <p>
+    Contact: jansenbenter@gmail.com
+  </p>
+
+  <p>
+    This website is Benter Jansen's property,
+    and he is responsible for it.
+  </p>
+</details>
