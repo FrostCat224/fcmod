@@ -141,6 +141,7 @@ button:hover {
     <div class="topbar">
   <div>
     <img src="https://frostcat224.github.io/fcmod/logo - Benterdecool Games.png". alt=Logo width=600 height=60>
+    <div id="gameCount"></div>
   </div>
 
   <form id="contactForm">
@@ -891,37 +892,40 @@ document.addEventListener("click", (e) => {
       const searchInput = document.getElementById("search");
 
       function renderStuff() {
-        stuffDiv.innerHTML = "";
+  stuffDiv.innerHTML = "";
 
-        const search = searchInput.value.toLowerCase();
+  const search = searchInput.value.toLowerCase();
 
-        const enabledSystems = [
-          ...document.querySelectorAll(".filters input:checked")
-        ].map(box => box.value);
+  const enabledSystems = [
+    ...document.querySelectorAll(".filters input:checked")
+  ].map(box => box.value);
 
-        const filteredStuff = stuff.filter(item => {
-          const matchesSearch =
-            item.name.toLowerCase().includes(search);
+  const filteredStuff = stuff.filter(item => {
+    const matchesSearch =
+      item.name.toLowerCase().includes(search);
 
-          const matchesSystem =
-            enabledSystems.includes(item.system);
+    const matchesSystem =
+      enabledSystems.includes(item.system);
 
-          return matchesSearch && matchesSystem;
-        });
+    return matchesSearch && matchesSystem;
+  });
 
-        filteredStuff.forEach(item => {
-          const button = document.createElement("a");
+  // Show game count
+  document.getElementById("gameCount").textContent =
+    `Games: ${filteredStuff.length} / ${stuff.length}`;
 
-          button.className = "rainbow-button";
-          button.href = item.link;
-          button.target = "_blank";
+  filteredStuff.forEach(item => {
+    const button = document.createElement("a");
 
-          button.textContent =
-            `${item.name}`;
+    button.className = "rainbow-button";
+    button.href = item.link;
+    button.target = "_blank";
 
-          stuffDiv.appendChild(button);
-        });
-      }
+    button.textContent = item.name;
+
+    stuffDiv.appendChild(button);
+  });
+}
 
       searchInput.addEventListener("input", renderStuff);
 
