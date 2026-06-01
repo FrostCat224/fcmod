@@ -960,17 +960,38 @@ document.addEventListener("click", (e) => {
   document.getElementById("gameCount").textContent =
     `Games: ${filteredStuff.length} / ${stuff.length}`;
 
-  filteredStuff.forEach(item => {
-    const button = document.createElement("a");
+  // Random button (always first)
+const randomButton = document.createElement("a");
 
-    button.className = "rainbow-button";
-    button.href = item.link;
-    button.target = "_blank";
+randomButton.className = "rainbow-button";
+randomButton.href = "#";
+randomButton.textContent = "Random Game";
 
-    button.textContent = item.name;
+randomButton.addEventListener("click", (e) => {
+  e.preventDefault();
 
-    stuffDiv.appendChild(button);
-  });
+  if (filteredStuff.length === 0) return;
+
+  const randomGame =
+    filteredStuff[Math.floor(Math.random() * filteredStuff.length)];
+
+  window.open(randomGame.link, "_blank");
+});
+
+stuffDiv.appendChild(randomButton);
+
+// Normal game buttons
+filteredStuff.forEach(item => {
+  const button = document.createElement("a");
+
+  button.className = "rainbow-button";
+  button.href = item.link;
+  button.target = "_blank";
+
+  button.textContent = item.name;
+
+  stuffDiv.appendChild(button);
+});
 }
 
       searchInput.addEventListener("input", renderStuff);
