@@ -919,9 +919,19 @@ document.addEventListener("click", (e) => {
       ];
 
       stuff.sort((a, b) => a.name.localeCompare(b.name));
+      stuff.unshift({
+  name: "🎲 Random",
+  link: "#",
+  system: "Random"
+});
+      
 
       const filtersDiv = document.getElementById("filters");
-      const systems = [...new Set(stuff.map(item => item.system))];
+      const systems = [...new Set(
+  stuff
+    .filter(item => item.system !== "Random")
+    .map(item => item.system)
+)];
 
       systems.forEach(system => {
         const label = document.createElement("label");
@@ -951,48 +961,44 @@ document.addEventListener("click", (e) => {
       item.name.toLowerCase().includes(search);
 
     const matchesSystem =
-      enabledSystems.includes(item.system);
+  item.system === "Random" ||
+  enabledSystems.includes(item.system);
 
     return matchesSearch && matchesSystem;
   });
 
-  // Show game count
   document.getElementById("gameCount").textContent =
     `Games: ${filteredStuff.length} / ${stuff.length}`;
 
-  // Random button (always first)
-const randomButton = document.createElement("a");
-
-randomButton.className = "rainbow-button";
-randomButton.href = "#";
-randomButton.textContent = "Random Game";
-
-randomButton.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  if (filteredStuff.length === 0) return;
-
-  const randomGame =
-    filteredStuff[Math.floor(Math.random() * filteredStuff.length)];
-
-  window.open(randomGame.link, "_blank");
-});
-
-stuffDiv.appendChild(randomButton);
-
-// Normal game buttons
 filteredStuff.forEach(item => {
   const button = document.createElement("a");
 
   button.className = "rainbow-button";
-  button.href = item.link;
-  button.target = "_blank";
+
+  if (item.system === "Random") {
+    button.href = "#";
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const possibleGames = stuff.filter(
+        game => game.system !== "Random"
+      );
+
+      const randomGame =
+        possibleGames[Math.floor(Math.random() * possibleGames.length)];
+
+      window.open(randomGame.link, "_blank");
+    });
+  } else {
+    button.href = item.link;
+    button.target = "_blank";
+  }
 
   button.textContent = item.name;
 
   stuffDiv.appendChild(button);
 });
-}
 
       searchInput.addEventListener("input", renderStuff);
 
