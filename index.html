@@ -158,8 +158,7 @@ button:hover {
     <button type="submit">Send</button>
   </form>
 </div>
-    <p> If a game suddenly takes you to a different website when clicking on a logo, that is completely normal (especially on old Flash games), and all those websites are safe or deleted.</p>
-<p> This website is completely safe, all pages have been scanned by an anti-virus.</p>
+
     <div class="search-row">
   <input type="text" id="search" placeholder="Search..." />
 
@@ -933,6 +932,11 @@ document.addEventListener("click", (e) => {
           system: "Flash"
         },
         {
+          name: "N",
+          link: "https://frostcat224.github.io/fcmod/html/n.html",
+          system: "Flash"
+        },
+        {
           name: "Subway Surfers: Barcelona",
           link: "https://frostcat224.github.io/fcmod/html/ssbarcelona.html",
           system: "HTML5"
@@ -1133,7 +1137,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   </p>
 
   <p>
-    Q: Is this site unblocked on school Wi-Fi? A: Mostly, yes.
+    Q: Are the games on this site unblocked on school Wi-Fi? A: Yes.
   </p>
 
   <p>
@@ -1141,7 +1145,9 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   </p>
 </details>
     <p> </p>
-<div id="counter">Loading...</div>
+        <p> If a game suddenly takes you to a different website when clicking on a logo, that is completely normal (especially on old Flash games), and all those websites are safe or deleted.</p>
+<p> This website is completely safe, all pages have been scanned by an anti-virus.</p>
+<div id="counter">Loading page views...</div>
 
 <script>
 fetch("https://api.counterapi.dev/v1/benterdecool/pageviews/up")
@@ -1151,6 +1157,7 @@ fetch("https://api.counterapi.dev/v1/benterdecool/pageviews/up")
       "Visitors: " + data.count;
   });
 </script>
+    
 
     <ins class="adsbygoogle"
      style="display:block"
