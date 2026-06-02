@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Gun Mayhem Clone</title>
+<style>
+    body { margin: 0; background: #222; overflow: hidden; }
+    canvas { display: block; margin: auto; background: #333; }
+</style>
+</head>
+<body>
+<canvas id="gameCanvas" width="800" height="500"></canvas>
+
+<script>
+// ===== Game Setup =====
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+const player = {
+    x: 100, y: 400, w: 40, h: 40,
+    color: "orange",
+    speed: 4,
+    vy: 0,
+    jumping: false
+};
+
+const bullets = [];
+const gravity = 0.5;
+
+// ===== Input Handling =====
+const keys = {};
+document.addEventListener("keydown", e => keys[e.code] = true);
+document.addEventListener("keyup", e => keys[e.code] = false);
+
+// ===== Game Loop =====
+function update() {
+    // Movement
+    if (keys["ArrowLeft"]) player.x -= player.speed;
+    if (keys["ArrowRight"]) player.x += player.speed;
+
+    // Jump
+    if (keys["Space"] && !player.jumping) {
+        player.vy = -10;
+        player.jumping = true;
+    }
+
+    // Apply gravity
+    player.vy += gravity;
+    player.y += player.vy;
+
+    // Ground collision
+    if (player.y + player.h >= canvas.height) {
+        player.y = canvas.height - player.h;
+        player.vy = 0;
+        player.jumping = false;
+    }
+
+    // Shooting
+    if (keys["KeyZ"]) {
+        if (bullets.length === 0 || Date.now() - bullets[bullets.length - 1].time > 200) {
+            bullets.push({ x: player.x + player.w, y: player.y + player.h / 2, speed: 8, time: Date.now() });
+        }
+    }
+
+    // Update bullets
+    for (let i = bullets.length - 1; i >= 0; i--) {
+        bullets[i].x += bullets[i].speed;
+        if (bullets[i].x > canvas.width) bullets.splice(i, 1);
+    }
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw player
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.w, player.h);
+
+    // Draw bullets
+    ctx.fillStyle = "yellow";
+    bullets.forEach(b => ctx.fillRect(b.x, b.y, 10, 4));
+}
+
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+</script>
+</body>
+</html>
