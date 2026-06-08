@@ -47,7 +47,7 @@
   min-width: 220px;
   z-index: 1000;
 }
-
+e
 .filters.show {
   display: block;
 }
@@ -60,8 +60,10 @@
   cursor: pointer;
 }
 body {
-  background: url("https://frostcat224.github.io/fcmod/1567666.png") no-repeat center center fixed;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
   font-family: Verdana;
 }
@@ -148,6 +150,14 @@ button:hover {
   </head>
 
   <body>
+
+    <script>
+if (Math.random() < 0.01) {
+  document.body.style.backgroundImage = 'url("charlie.png")';
+} else {
+  document.body.style.backgroundImage = 'url("https://frostcat224.github.io/fcmod/1567666.png")';
+}
+</script>
     <div class="topbar">
   <div>
     <img src="https://frostcat224.github.io/fcmod/logo - Benterdecool Games.png". alt=Logo width=600 height=60>
