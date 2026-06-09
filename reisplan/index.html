@@ -1,50 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Reis van 1945</title>
 
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Reis van 1945</title>
 
-        body {
+<style>
+body {
+    margin: 0;
+    padding: 40px;
+    background: #fff4db;
     font-family: 'Londrina Solid', sans-serif;
+    color: #111;
 }
-        .blob {
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.warning {
+    font-weight: 900;
+    font-size: 22px;
+    color: #111;
+}
+
+/* TITLE */
+.title {
+    font-size: 64px;
+    font-weight: 900;
+    margin: 10px 0;
+    line-height: 0.9;
+}
+
+/* SUBTEXT */
+.subtitle {
+    font-size: 18px;
+    max-width: 500px;
+}
+
+/* BLOBS */
+.blob {
+    display: inline-block;
     background: #f2c577;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-width: 150px;
-    min-height: 150px;
-    padding: 30px;
-
-    border-radius: 25% 20% 25% 20%;
-
-    text-align: center;
-    box-sizing: border-box;
+    padding: 25px 30px;
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+    margin: 15px;
+    max-width: 320px;
+    font-size: 18px;
+    position: relative;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+    transform: rotate(-1deg);
 }
-        body {
-            background-color: #fff4db;
-            margin: 0;
-            padding: 20px;
-        }
-    </style>
+
+/* VARIATIONS */
+.blob.dark {
+    background: #e7b45a;
+    transform: rotate(2deg);
+}
+
+.blob.small {
+    max-width: 220px;
+    font-size: 16px;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+/* CTA */
+.cta {
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 20px;
+    background: #f2c577;
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+}
+</style>
 </head>
+
 <body>
-    <h1>De Reis van 1945</h1>
+
+<div class="header">
+    <div class="logo">B&N Co.</div>
+    <div class="warning">HEEL DUURZAAM!</div>
+</div>
+
+<div class="title">DE REIS VAN 1945</div>
+
+<div class="subtitle">
+Reis door Europa en bekijk oorlogsmonumenten.
+</div>
+
+<div class="grid">
     <div class="blob">
-        Wij regelen voor u het vervoer. U krijgt een laadpas waarmee u overal gratis kan opladen.
+        Wij regelen voor u het vervoer naar Auschwitz met een laadpas.
     </div>
-            <div class="blob">
-       Ook hebben wij een hele selectie hotels uitgezocht, zodat u daar fijn en duurzaam kunt slapen.
+
+    <div class="blob dark">
+        Wij hebben hotels geselecteerd zodat u duurzaam kunt overnachten.
     </div>
-            <div class="blob">
-        Als er problemen met de reis zijn, bel +31 648182144.
+
+    <div class="blob small">
+        Problemen? Bel +31 648182144.
     </div>
+
+    <div class="blob">
+        Speciale route langs historische plekken uit 1945.
+    </div>
+</div>
+
+<div class="cta">
+    Voor meer informatie: benterdecool.nl/reisplan
+</div>
+
 </body>
 </html>
