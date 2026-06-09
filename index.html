@@ -144,6 +144,26 @@ button:hover {
   box-shadow: 0 0 15px white;
   filter: brightness(1.2);
       }
+      /* --- Rounded corners (subtle) --- */
+.rainbow-button {
+  border-radius: 8px; /* not too round */
+}
+
+input, button, .filters, .footer-info {
+  border-radius: 8px;
+}
+
+/* --- Scroll fade-in animation --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
     </style>
     
     <link rel="icon" type="image/x-icon" href="b.ico">
@@ -1273,6 +1293,7 @@ document.addEventListener("click", (e) => {
           system: "HTML5"
         },
       ];
+    
 
       stuff.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -1292,6 +1313,21 @@ document.addEventListener("click", (e) => {
 
       const stuffDiv = document.getElementById("stuff");
       const searchInput = document.getElementById("search");
+      const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+function observeItems() {
+  document.querySelectorAll(".fade-in").forEach(el => {
+    observer.observe(el);
+  });
+}
 
       function renderStuff() {
   stuffDiv.innerHTML = "";
@@ -1311,6 +1347,7 @@ document.addEventListener("click", (e) => {
 
     return matchesSearch && matchesSystem;
   });
+       
 
   // Show game count
   document.getElementById("gameCount").textContent =
@@ -1319,7 +1356,7 @@ document.addEventListener("click", (e) => {
   filteredStuff.forEach(item => {
     const button = document.createElement("a");
 
-    button.className = "rainbow-button";
+    button.className = "rainbow-button fade-in";
     button.href = item.link;
     button.target = "_blank";
 
@@ -1328,6 +1365,7 @@ document.addEventListener("click", (e) => {
     stuffDiv.appendChild(button);
   });
 }
+       observeItems();
 
       searchInput.addEventListener("input", renderStuff);
 
