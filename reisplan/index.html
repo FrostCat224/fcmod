@@ -10,6 +10,26 @@
 <title>De Reis van 1945</title>
 
 <style>
+    /* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 8px 0 rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
 
 body {
     margin: 0;
@@ -170,6 +190,16 @@ Reis door Europa en bekijk oorlogsmonumenten.
             <div class="route-item">Je hoeft niet te slapen in een milieuvervuildende hotel, je kunt slapen in het huurbusje!</div>
         </div>
 
+    </div>
+</div>
+    <!-- FOTO GALERIJ -->
+<div class="section" id="galerij">
+    <div class="buy-box">
+        <div class="price">Foto's van de reis</div>
+
+        <div class="gallery">
+            <img src="https://benterdecool.nl/reisplan/auschwitz.png" alt="Auschwitz">
+        </div>
     </div>
 </div>
 <!-- BUY SECTION -->
