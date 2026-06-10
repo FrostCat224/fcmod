@@ -9,6 +9,44 @@
     <title>benterdecool.nl</title>
 
     <style>
+      .random-game-button {
+  display: block;
+
+  width: fit-content;
+  margin: 30px auto;
+
+  padding: 20px 40px;
+
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+
+  color: white;
+
+  background:
+    linear-gradient(black, black) padding-box,
+    linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      lime,
+      cyan,
+      blue,
+      violet,
+      red
+    ) border-box;
+
+  border: 4px solid transparent;
+  border-radius: 12px;
+
+  transition: all 0.2s ease;
+}
+
+.random-game-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px white;
+}
       .filters label span {
   display: block;
 }
@@ -1455,17 +1493,38 @@ function observeItems() {
     `Games: ${filteredStuff.length} / ${stuff.length}`;
 
   filteredStuff.forEach(item => {
-    const button = document.createElement("a");
+  const button = document.createElement("a");
 
-    button.className = "rainbow-button fade-in";
-    button.href = item.link;
-    button.target = "_blank";
+  button.className = "rainbow-button fade-in";
+  button.href = item.link;
+  button.target = "_blank";
 
-    button.textContent = item.name;
+  button.textContent = item.name;
 
-    stuffDiv.appendChild(button);
-  });
-  observeItems();
+  stuffDiv.appendChild(button);
+});
+
+/* Random button at bottom */
+const randomButton = document.createElement("a");
+
+randomButton.className = "random-game-button fade-in";
+randomButton.href = "#";
+randomButton.textContent = "RANDOM GAME";
+
+randomButton.onclick = (e) => {
+  e.preventDefault();
+
+  const randomGame =
+    filteredStuff[Math.floor(Math.random() * filteredStuff.length)];
+
+  window.open(randomGame.link, "_blank");
+};
+
+stuffDiv.appendChild(document.createElement("br"));
+stuffDiv.appendChild(document.createElement("br"));
+stuffDiv.appendChild(randomButton);
+
+observeItems();
 }
        
 
