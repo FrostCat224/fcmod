@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reisplan De Reis van 1945</title>
+
+<style>
+    .back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+}
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Londrina Solid', sans-serif;
+    color: #111;
+
+    background-image: url("https://benterdecool.nl/reisplan/gb.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* TITLE */
+.title {
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    line-height: 0.9;
+}
+
+.subtitle {
+    font-size: 18px;
+    max-width: 600px;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+/* DAY CARDS */
+.day {
+    background: #f2c577;
+    padding: 20px 25px;
+    border-radius: 30px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+    width: 250px;
+    transition: transform 0.2s ease;
+    transform: rotate(-1deg);
+}
+
+.day:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.day h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.day p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+/* SCROLL ANIMATION */
+.section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-weight: 900;
+}
+
+.warning {
+    font-weight: 900;
+}
+</style>
+</head>
+
+<a class="back-btn" href="https://benterdecool.nl/reisplan">Terug</a>
+
+<div class="header">
+    <div class="logo">B&N Co. Reisplan</div>
+</div>
+
+<div class="title">REISPLAN 1945</div>
+
+<div class="subtitle">
+Hier zijn de locaties
+</div>
+
+<div class="section">
+<div class="grid">
+
+    <div class="day"><p>Google Maps</p></div>
+    <div class="day"><p>Corendon.nl</p></div>
+    <div class="day"><p>Github</p></div>
+<div class="day"><p>Fastned</p></div>
+<div class="day"><p>vwbedrijfswagens.nl/nl/modellen/id-buzz.html</p></div>
+    <div class="day"><p>4en5mei.nl/oorlogsmonumenten</p></div>
+<div class="day"><p>auschwitz.org</p></div>
+
+</div>
+</div>
+
+<script>
+// smooth reveal
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.2 });
+
+sections.forEach(sec => observer.observe(sec));
+</script>
+
+</body>
+
+</html>
