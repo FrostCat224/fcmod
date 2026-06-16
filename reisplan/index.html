@@ -127,7 +127,36 @@ body {
     transform: translateY(60px);
     transition: all 0.8s ease;
 }
+.side-by-side {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 
+.gallery-box {
+    flex: 1;
+    min-width: 400px;
+}
+
+.image-card {
+    flex: 0 0 auto;
+    width: 350px;
+    text-align: center;
+}
+
+.image-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 8px 0 rgba(0,0,0,0.15);
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 18px;
+}
 .section.show {
     opacity: 1;
     transform: translateY(0);
@@ -200,31 +229,57 @@ Reis door Europa en bekijk oorlogsmonumenten.
     </div>
 </div>
 
-<!-- SUSTAINABILITY SECTION -->
 <div class="section" id="duurzaam">
-    <div class="buy-box">
 
-        <div class="price">Waarom deze reis duurzaam is</div>
+    <div class="side-by-side">
 
-        <div class="route-list">
-            <div class="route-item">De huurbusje is 100% elektrisch.</div>
-            <div class="route-item">Je hoeft niet te slapen in een milieuvervuildende hotel, je kunt slapen in het huurbusje!</div>
+        <!-- DUURZAAMHEID -->
+        <div class="buy-box">
+            <div class="price">Waarom deze reis duurzaam is</div>
+
+            <div class="route-list">
+                <div class="route-item">
+                    Het huurbusje is 100% elektrisch.
+                </div>
+
+                <div class="route-item">
+                    Je hoeft niet te slapen in een milieuvervuilend hotel,
+                    je kunt slapen in het huurbusje!
+                </div>
+            </div>
+        </div>
+
+        <!-- GALERIJ -->
+        <div class="buy-box gallery-box">
+            <div class="price">Foto's van de reis</div>
+
+            <div class="gallery">
+
+                <div class="image-card">
+                    <img src="https://benterdecool.nl/reisplan/auschwitz.png" alt="Auschwitz">
+                    <div class="image-caption">Auschwitz</div>
+                </div>
+
+                <div class="image-card">
+                    <img src="https://benterdecool.nl/reisplan/hartenstein.png" alt="Hartenstein">
+                    <div class="image-caption">Airborne Museum Hartenstein</div>
+                </div>
+
+                <div class="image-card">
+                    <img src="https://benterdecool.nl/reisplan/memorialofthejews.png" alt="Memorial">
+                    <div class="image-caption">Memorial for the Murdered Jews of Europe</div>
+                </div>
+
+                <div class="image-card">
+                    <img src="https://benterdecool.nl/reisplan/kazimierz.png" alt="Kazimierz">
+                    <div class="image-caption">Kazimierz</div>
+                </div>
+
+            </div>
         </div>
 
     </div>
-</div>
-    <!-- FOTO GALERIJ -->
-<div class="section" id="galerij">
-    <div class="buy-box">
-        <div class="price">Foto's van de reis</div>
 
-        <div class="gallery">
-            <img src="https://benterdecool.nl/reisplan/auschwitz.png" alt="foto">
-            <img src="https://benterdecool.nl/reisplan/hartenstein.png" alt="foto">
-            <img src="https://benterdecool.nl/reisplan/memorialofthejews.png" alt="foto">
-            <img src="https://benterdecool.nl/reisplan/kazimierz.png" alt="foto">
-        </div>
-    </div>
 </div>
 <!-- BUY SECTION -->
 <div class="section" id="koop">
