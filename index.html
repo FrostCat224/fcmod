@@ -1,1 +1,1668 @@
-c
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="b.ico">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9541708759623878"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>benterdecool.nl</title>
+
+    <style>
+      
+      .random-game-button {
+ display: inline-block;
+        padding: 12px 24px;
+        margin: 5px;
+        color: white;
+        text-decoration: none;
+        background:
+          linear-gradient(black, black) padding-box,
+          linear-gradient(
+            45deg,
+            red,
+            orange,
+            yellow,
+            lime,
+            cyan,
+            blue,
+            violet,
+            red
+          ) border-box;
+        border: 3px solid transparent;
+        border-radius: 8px; 
+}
+
+.random-game-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px white;
+  filter: brightness(1.2);
+}
+      .filters label span {
+  display: block;
+}
+      .footer-info {
+  margin-top: 30px;
+  background: black;
+  border: 2px solid white;
+  padding: 10px;
+  width: fit-content;
+}
+
+.footer-info summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+      .search-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-dropdown {
+  position: relative;
+}
+
+#filterButton {
+  background: black;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 16px;
+  font-family: Verdana;
+  cursor: pointer;
+}
+
+#filterButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.filters {
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 0;
+
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(12px);
+
+  border: 2px solid transparent;
+  background:
+    linear-gradient(rgba(20,20,20,0.95), rgba(20,20,20,0.95)) padding-box,
+    linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      lime,
+      cyan,
+      blue,
+      violet
+    ) border-box;
+
+  border-radius: 12px;
+
+  padding: 12px;
+  min-width: 250px;
+
+  z-index: 1000;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.5),
+    0 0 15px rgba(255,255,255,0.1);
+}
+
+.filters.show {
+  display: block;
+}
+
+.filters label {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 8px 10px;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.filters label:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.filters input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+
+  accent-color: white;
+}
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-family: Verdana;
+}
+
+      .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#contactForm {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button {
+  background: black;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 16px;
+  font-family: Verdana;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+      
+
+      h1 {
+        margin-bottom: 5px;
+      }
+
+      input {
+        background: black;
+        color: white;
+        border: 2px solid white;
+        padding: 10px;
+        font-family: Verdana;
+        width: 300px;
+        margin-bottom: 10px;
+      }
+
+      .filters {
+        margin-bottom: 20px;
+      }
+
+
+
+      .rainbow-button {
+        display: inline-block;
+        padding: 12px 24px;
+        margin: 5px;
+        color: white;
+        text-decoration: none;
+        background:
+          linear-gradient(black, black) padding-box,
+          linear-gradient(
+            45deg,
+            red,
+            orange,
+            yellow,
+            lime,
+            cyan,
+            blue,
+            violet,
+            red
+          ) border-box;
+        border: 3px solid transparent;
+        border-radius: 0px;
+      }
+      .rainbow-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px white;
+  filter: brightness(1.2);
+      }
+      /* --- Rounded corners (subtle) --- */
+.rainbow-button {
+  border-radius: 8px; /* not too round */
+}
+
+input, button, .filters, .footer-info {
+  border-radius: 8px;
+}
+
+/* --- Scroll fade-in animation --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.2s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    </style>
+    
+    <link rel="icon" type="image/x-icon" href="b.ico">
+  </head>
+
+  <body>
+
+    <script>
+if (Math.random() < 0.01) {
+  document.body.style.backgroundImage = 'url("charlie.png")';
+} else {
+  document.body.style.backgroundImage = 'url("https://frostcat224.github.io/fcmod/1567666.png")';
+}
+</script>
+    <div class="topbar">
+  <div>
+    <img src="https://frostcat224.github.io/fcmod/logo - Benterdecool Games.png". alt=Logo width=600 height=60>
+
+  </div>
+
+  <form id="contactForm">
+    <input
+      type="text"
+      id="message"
+      placeholder="What game should Benter add?"
+      required
+    >
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+    <div class="search-row">
+  <input type="text" id="search" placeholder="Search..." />
+
+  <div class="filter-dropdown">
+    <button id="filterButton">Filters ▼</button>
+
+    <div class="filters" id="filters"></div>
+  </div>
+</div>
+<div id="gameCount"></div>
+
+    <script>
+      const filterButton = document.getElementById("filterButton");
+
+filterButton.addEventListener("click", () => {
+  filtersDiv.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    !e.target.closest(".filter-dropdown")
+  ) {
+    filtersDiv.classList.remove("show");
+  }
+});
+
+    </script>
+    <div id="stuff"></div>
+
+    <script>
+      const stuff = [
+        {
+          name: "Super Mario 64",
+          link: "https://frostcat224.github.io/fcmod/html/sm64.html",
+          system: "N64"
+        },
+        {
+          name: "2048",
+          link: "https://frostcat224.github.io/fcmod/html/2048.html",
+          system: "HTML5"
+        },
+        {
+          name: "Appel (Desert)",
+          link: "https://frostcat224.github.io/fcmod/html/appel.html",
+          system: "Scratch"
+        },
+        {
+          name: "Drift Hunters",
+          link: "https://frostcat224.github.io/fcmod/html/drifthunters.html",
+          system: "HTML5"
+        },
+        {
+          name: "Nova Infinite Craft",
+          link: "https://frostcat224.github.io/fcmod/html/infinitecraft.html",
+          system: "HTML5"
+        },
+        {
+          name: "Flappy Bird",
+          link: "https://frostcat224.github.io/fcmod/html/flappybird.html",
+          system: "Flash"
+        },
+        {
+          name: "Troll Face Quest 1",
+          link: "https://frostcat224.github.io/fcmod/html/trollfacequest1.html",
+          system: "Flash"
+        },
+        {
+          name: "Bloxorz",
+          link: "https://frostcat224.github.io/fcmod/html/bloxorz.html",
+          system: "Flash"
+        },
+        {
+          name: "Bad Time Simulator",
+          link: "https://frostcat224.github.io/fcmod/html/badtimesimulator.html",
+          system: "HTML5"
+        },
+        {
+          name: "Minecraft (Indev)",
+          link: "https://frostcat224.github.io/fcmod/html/clEaglercraft-Indev-Offline.html",
+          system: "Eaglertek"
+        },
+        {
+          name: "Minecraft (CoderCraft)",
+          link: "https://frostcat224.github.io/fcmod/html/codercraft.html",
+          system: "Eaglertek"
+        },
+        {
+          name: "Minecraft (Astra Client)",
+          link: "https://frostcat224.github.io/fcmod/html/astraclient.html",
+          system: "Eaglertek"
+        },
+        {
+          name: "Duck Life",
+          link: "https://frostcat224.github.io/fcmod/html/ducklife.html",
+          system: "Flash"
+        },
+        {
+          name: "Chess",
+          link: "https://frostcat224.github.io/fcmod/html/chess.html",
+          system: "HTML5"
+        },
+        {
+          name: "Tasty Planet",
+          link: "https://frostcat224.github.io/fcmod/html/tastyplanet.html",
+          system: "Flash"
+        },
+        {
+          name: "Bubble Shooter",
+          link: "https://frostcat224.github.io/fcmod/html/bubbleshooter.html",
+          system: "Flash"
+        },
+        {
+          name: "Duck Life 2",
+          link: "https://frostcat224.github.io/fcmod/html/ducklife2.html",
+          system: "Flash"
+        },
+        {
+          name: "Duck Life 3",
+          link: "https://frostcat224.github.io/fcmod/html/ducklife3.html",
+          system: "Flash"
+        },
+        {
+          name: "Pou",
+          link: "https://frostcat224.github.io/fcmod/html/pou.html",
+          system: "HTML5"
+        },
+        {
+          name: "Fih",
+          link: "https://frostcat224.github.io/fcmod/html/fih.html",
+          system: "HTML5"
+        },
+        {
+          name: "Flood Runner",
+          link: "https://frostcat224.github.io/fcmod/html/floodrunner.html",
+          system: "Flash"
+        },
+        {
+          name: "Duck Life 4",
+          link: "https://frostcat224.github.io/fcmod/html/ducklife4.html",
+          system: "Flash"
+        },
+        {
+          name: "Duck Life 5",
+          link: "https://frostcat224.github.io/fcmod/html/ducklife5.html",
+          system: "Flash"
+        },
+        {
+          name: "You vs. 100 Skibidi",
+          link: "https://frostcat224.github.io/fcmod/html/youvs100skibidi.html",
+          system: "Unity"
+        },
+        {
+          name: "1",
+          link: "https://frostcat224.github.io/fcmod/html/1.html",
+          system: "HTML5"
+        },
+        {
+          name: "Dadish 2",
+          link: "https://frostcat224.github.io/fcmod/html/dadish2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Dadish 3D",
+          link: "https://frostcat224.github.io/fcmod/html/dadish3d.html",
+          system: "HTML5"
+        },
+        {
+          name: "The Impossible Game (Lite)",
+          link: "https://frostcat224.github.io/fcmod/html/tig.html",
+          system: "Flash"
+        },
+        {
+          name: "The Impossible Quiz",
+          link: "https://frostcat224.github.io/fcmod/html/imposquiz.html",
+          system: "Flash"
+        },
+        {
+          name: "Scooby Doo Creepy Run",
+          link: "https://frostcat224.github.io/fcmod/html/scoobydoocreepyrun.html",
+          system: "Flash"
+        },
+        {
+          name: "The Impossible Quiz 2",
+          link: "https://frostcat224.github.io/fcmod/html/imposquiz2.html",
+          system: "Flash"
+        },
+        {
+          name: "Megachess",
+          link: "https://frostcat224.github.io/fcmod/html/megachess.html",
+          system: "HTML5"
+        },
+        {
+          name: "Xor",
+          link: "https://frostcat224.github.io/fcmod/html/xor.html",
+          system: "HTML5"
+        },
+        {
+          name: "Drive Mad",
+          link: "https://frostcat224.github.io/fcmod/html/drivemad.html",
+          system: "HTML5"
+        },
+        {
+          name: "Babel Tower",
+          link: "https://frostcat224.github.io/fcmod/html/babeltower.html",
+          system: "HTML5"
+        },
+        {
+          name: "Dreadhead Parkour",
+          link: "https://frostcat224.github.io/fcmod/html/dreadheadparkour.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vvvvvv",
+          link: "https://frostcat224.github.io/fcmod/html/vvvvvv.html",
+          system: "Flash"
+        },
+        {
+          name: "Terra",
+          link: "https://frostcat224.github.io/fcmod/html/terra.html",
+          system: "Pico-8"
+        },
+        {
+          name: "Gun Mayhem",
+          link: "https://frostcat224.github.io/fcmod/html/gunmayhem.html",
+          system: "Flash"
+        },
+        {
+          name: "Gun Mayhem 2",
+          link: "https://frostcat224.github.io/fcmod/html/gunmayhem2.html",
+          system: "Flash"
+        },
+        {
+          name: "Gun Mayhem Redux",
+          link: "https://frostcat224.github.io/fcmod/html/gunmayhemredux.html",
+          system: "Flash"
+        },
+        {
+          name: "Zrist",
+          link: "https://frostcat224.github.io/fcmod/html/zrist.html",
+          system: "HTML5"
+        },
+        {
+          name: "t³",
+          link: "https://frostcat224.github.io/fcmod/html/t³.html",
+          system: "Unity"
+        },
+        {
+          name: "Icy Purple Head",
+          link: "https://frostcat224.github.io/fcmod/html/icypurplehead.html",
+          system: "HTML5"
+        },
+        {
+          name: "Rocket League",
+          link: "https://frostcat224.github.io/fcmod/html/rocketleague.html",
+          system: "HTML5"
+        },
+        {
+          name: "Henry Stickmin Escaping the Prison",
+          link: "https://frostcat224.github.io/fcmod/html/henrystickminescapingtheprison.html",
+          system: "Flash"
+        },
+        {
+          name: "Undertale Yellow",
+          link: "https://frostcat224.github.io/fcmod/html/undertaleyellow.html",
+          system: "HTML5"
+        },
+        {
+          name: "Sonic the Hedgehog",
+          link: "https://frostcat224.github.io/fcmod/html/sonicthehedgehog.html",
+          system: "Sega Game Gear"
+        },
+        {
+          name: "Sonic the Hedgehog 2",
+          link: "https://frostcat224.github.io/fcmod/html/sonicthehedgehog2.html",
+          system: "Sega Game Gear"
+        },
+        {
+          name: "Room Clicker",
+          link: "https://frostcat224.github.io/fcmod/html/roomclicker.html",
+          system: "HTML5"
+        },
+        {
+          name: "UvuvwevwevweOnyetenvewveUgwemubwemOssas",
+          link: "https://frostcat224.github.io/fcmod/html/UvuvwevwevweOnyetenvewveUgwemubwemOssas.html",
+          system: "HTML5"
+        },
+        {
+          name: "Angry Birds",
+          link: "https://frostcat224.github.io/fcmod/html/angrybirds.html",
+          system: "HTML5"
+        },
+        {
+          name: "QWOP",
+          link: "https://frostcat224.github.io/fcmod/html/qwop.html",
+          system: "Flash"
+        },
+        {
+          name: "Angry Birds 2",
+          link: "https://frostcat224.github.io/fcmod/html/angrybirds2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Dadish",
+          link: "https://frostcat224.github.io/fcmod/html/dadish.html",
+          system: "HTML5"
+        },
+        {
+          name: "Gravity",
+          link: "https://frostcat224.github.io/fcmod/html/gravity.html",
+          system: "HTML5"
+        },
+        {
+          name: "Bloons",
+          link: "https://frostcat224.github.io/fcmod/html/bloons.html",
+          system: "Flash"
+        },
+        {
+          name: "Monkey Mart",
+          link: "https://frostcat224.github.io/fcmod/html/monkeymart.html",
+          system: "HTML5"
+        },
+        {
+          name: "Bloons 2",
+          link: "https://frostcat224.github.io/fcmod/html/bloons2.html",
+          system: "Flash"
+        },
+        {
+          name: "Bloons Tower Defense",
+          link: "https://frostcat224.github.io/fcmod/html/bloonstd.html",
+          system: "Flash"
+        },
+        {
+          name: "Bloons Tower Defense 2",
+          link: "https://frostcat224.github.io/fcmod/html/bloonstd2.html",
+          system: "Flash"
+        },
+        {
+          name: "Bloons Tower Defense 3",
+          link: "https://frostcat224.github.io/fcmod/html/bloonstd3.html",
+          system: "Flash"
+        },
+        {
+          name: "Bloons Tower Defense 4",
+          link: "https://frostcat224.github.io/fcmod/html/bloonstd4.html",
+          system: "Flash"
+        },
+        {
+          name: "Slowroads.io",
+          link: "https://frostcat224.github.io/fcmod/html/slowroadsio.html",
+          system: "HTML5"
+        },
+        {
+          name: "Getting Over It",
+          link: "https://frostcat224.github.io/fcmod/html/gettingoverit.html",
+          system: "Unity"
+        },
+        {
+          name: "Drift Boss",
+          link: "https://frostcat224.github.io/fcmod/html/driftboss.html",
+          system: "HTML5"
+        },
+        {
+          name: "Bloodmoney!",
+          link: "https://frostcat224.github.io/fcmod/html/bloodmoney.html",
+          system: "HTML5"
+        },
+        {
+          name: "Klifur",
+          link: "https://frostcat224.github.io/fcmod/html/klifur.html",
+          system: "HTML5"
+        },
+        {
+          name: "Karlson",
+          link: "https://frostcat224.github.io/fcmod/html/karlson.html",
+          system: "HTML5"
+        },
+        {
+          name: "Neon Rider",
+          link: "https://frostcat224.github.io/fcmod/html/neonrider.html",
+          system: "Flash"
+        },
+        {
+          name: "Eggy Car",
+          link: "https://frostcat224.github.io/fcmod/html/eggycar.html",
+          system: "HTML5"
+        },
+        {
+          name: "Customer Support",
+          link: "https://frostcat224.github.io/fcmod/html/customersupport.html",
+          system: "HTML5"
+        },
+        {
+          name: "Little Runmo",
+          link: "https://frostcat224.github.io/fcmod/html/littlerunmo.html",
+          system: "HTML5"
+        },
+        {
+          name: "Slither.io",
+          link: "https://frostcat224.github.io/fcmod/html/slitherio.html",
+          system: "HTML5"
+        },
+        {
+          name: "CaptchaWare",
+          link: "https://frostcat224.github.io/fcmod/html/captchaware.html",
+          system: "HTML5"
+        },
+        {
+          name: "Learn to Fly",
+          link: "https://frostcat224.github.io/fcmod/html/learntofly.html",
+          system: "Flash"
+        },
+        {
+          name: "Learn to Fly 2",
+          link: "https://frostcat224.github.io/fcmod/html/learntofly2.html",
+          system: "Flash"
+        },
+        {
+          name: "Learn to Fly 3",
+          link: "https://frostcat224.github.io/fcmod/html/learntofly3.html",
+          system: "Flash"
+        },
+        {
+          name: "Baldi's Basics",
+          link: "https://frostcat224.github.io/fcmod/html/baldisbasics.html",
+          system: "Unity"
+        },
+        {
+          name: "Baldi's Basics Remastered",
+          link: "https://frostcat224.github.io/fcmod/html/baldisbasicsremastered.html",
+          system: "Unity"
+        },
+        {
+          name: "-b",
+          link: "https://frostcat224.github.io/fcmod/html/-b.html",
+          system: "Unity"
+        },
+        {
+          name: "Learn to Fly Idle",
+          link: "https://frostcat224.github.io/fcmod/html/learntoflyidle.html",
+          system: "Flash"
+        },
+        {
+          name: "Angry Birds Online",
+          link: "https://frostcat224.github.io/fcmod/html/angrybirdsonline.html",
+          system: "HTML5"
+        },
+        {
+          name: "Angry Birds: Showdown",
+          link: "https://frostcat224.github.io/fcmod/html/angrybirdsshowdown.html",
+          system: "HTML5"
+        },
+        {
+          name: "Cut the Rope",
+          link: "https://frostcat224.github.io/fcmod/html/cuttherope.html",
+          system: "HTML5"
+        },
+        {
+          name: "Dodecadragons",
+          link: "https://frostcat224.github.io/fcmod/html/dodecadragons.html",
+          system: "HTML5"
+        },
+        {
+          name: "Angry Birds: Slingshot Frenzy",
+          link: "https://frostcat224.github.io/fcmod/html/angrybirdsslingshotfrenzy.html",
+          system: "HTML5"
+        },
+        {
+          name: "Uno",
+          link: "https://frostcat224.github.io/fcmod/html/uno.html",
+          system: "HTML5"
+        },
+        {
+          name: "Ovo",
+          link: "https://frostcat224.github.io/fcmod/html/ovo.html",
+          system: "HTML5"
+        },
+        {
+          name: "Brotato",
+          link: "https://frostcat224.github.io/fcmod/html/brotato.html",
+          system: "HTML5"
+        },
+        {
+          name: "Minecraft (1.9)",
+          link: "https://frostcat224.github.io/fcmod/html/clEaglercraftL_19_v0_7_0_Offline_Signed.html",
+          system: "Eaglertek"
+        },
+        {
+          name: "Slope: 2 Players",
+          link: "https://frostcat224.github.io/fcmod/html/slope2players.html",
+          system: "HTML5"
+        },
+        {
+          name: "3Dash",
+          link: "https://frostcat224.github.io/fcmod/html/3dash.html",
+          system: "HTML5"
+        },
+        {
+          name: "Burrito Bison",
+          link: "https://frostcat224.github.io/fcmod/html/burritobison.html",
+          system: "Flash"
+        },
+        {
+          name: "Burrito Bison Revenge",
+          link: "https://frostcat224.github.io/fcmod/html/burritobisonrevenge.html",
+          system: "Flash"
+        },
+        {
+          name: "Burrito Bison Launcha Libre",
+          link: "https://frostcat224.github.io/fcmod/html/burritobisonlaunchalibre.html",
+          system: "HTML5"
+        },
+        {
+          name: "Cookie Clicker",
+          link: "https://frostcat224.github.io/fcmod/html/cookieclicker.html",
+          system: "HTML5"
+        },
+        {
+          name: "Fortzone Battle Royale",
+          link: "https://frostcat224.github.io/fcmod/html/fortzonebattleroyale.html",
+          system: "HTML5"
+        },
+        {
+          name: "Russian Counter-Strike-6",
+          link: "https://frostcat224.github.io/fcmod/html/russiancsgo6.html",
+          system: "HTML5"
+        },
+        {
+          name: "Alex Kidd in Miracle World",
+          link: "https://frostcat224.github.io/fcmod/html/alexkidd.html",
+          system: "Sega Master System"
+        },
+        {
+          name: "Vex",
+          link: "https://frostcat224.github.io/fcmod/html/vex.html",
+          system: "Flash"
+        },
+        {
+          name: "A Small World Cup",
+          link: "https://frostcat224.github.io/fcmod/html/asmallworldcup.html",
+          system: "HTML5"
+        },
+        
+        {
+          name: "Vex 2",
+          link: "https://frostcat224.github.io/fcmod/html/vex2.html",
+          system: "Flash"
+        },
+        {
+          name: "Vex 3",
+          link: "https://frostcat224.github.io/fcmod/html/vex3.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex 4",
+          link: "https://frostcat224.github.io/fcmod/html/vex4.html",
+          system: "HTML5"
+        },
+        {
+          name: "Five Nights at Freddy's Sister Location",
+          link: "https://frostcat224.github.io/fcmod/html/fnafsisterlocation.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex 5",
+          link: "https://frostcat224.github.io/fcmod/html/vex5.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex 6",
+          link: "https://frostcat224.github.io/fcmod/html/vex6.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex 7",
+          link: "https://frostcat224.github.io/fcmod/html/vex7.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex 8",
+          link: "https://frostcat224.github.io/fcmod/html/vex8.html",
+          system: "HTML5"
+        },
+        {
+          name: "Fireboy and Watergirl",
+          link: "https://frostcat224.github.io/fcmod/html/fbawg.html",
+          system: "Flash"
+        },
+        {
+          name: "Fireboy and Watergirl 2",
+          link: "https://frostcat224.github.io/fcmod/html/fbawg2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Fireboy and Watergirl 3",
+          link: "https://frostcat224.github.io/fcmod/html/fbawg3.html",
+          system: "HTML5"
+        },
+        {
+          name: "Stickman Hook",
+          link: "https://frostcat224.github.io/fcmod/html/stickmanhook.html",
+          system: "HTML5"
+        },
+        {
+          name: "Fruit Ninja",
+          link: "https://frostcat224.github.io/fcmod/html/fruitninja.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex x3m",
+          link: "https://frostcat224.github.io/fcmod/html/vexx3m.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex x3m 2",
+          link: "https://frostcat224.github.io/fcmod/html/vexx3m2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Vex 3 Christmas",
+          link: "https://frostcat224.github.io/fcmod/html/vex3xmas.html",
+          system: "HTML5"
+        },
+        {
+          name: "There is No Game",
+          link: "https://frostcat224.github.io/fcmod/html/thereisnogame.html",
+          system: "HTML5"
+        },
+        {
+          name: "Super Mario 63 Redux",
+          link: "https://frostcat224.github.io/fcmod/html/sm63redux.html",
+          system: "HTML5"
+        },
+        {
+          name: "Trees hate you",
+          link: "https://frostcat224.github.io/fcmod/html/treeshateyou.html",
+          system: "HTML5"
+        },
+        {
+          name: "Survival Race",
+          link: "https://frostcat224.github.io/fcmod/html/survivalrace.html",
+          system: "HTML5"
+        },
+        {
+          name: "Rhythm Hell",
+          link: "https://frostcat224.github.io/fcmod/html/rhythmhell.html",
+          system: "HTML5"
+        },
+        {
+          name: "Survival Race V2",
+          link: "https://frostcat224.github.io/fcmod/html/survivalracev2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Sausage Flip",
+          link: "https://frostcat224.github.io/fcmod/html/sausageflip.html",
+          system: "HTML5"
+        },
+        {
+          name: "Tunnel Rush",
+          link: "https://frostcat224.github.io/fcmod/html/bettertunnelrush.html",
+          system: "HTML5"
+        },
+        {
+          name: "Crazy Cattle 3D",
+          link: "https://frostcat224.github.io/fcmod/html/crazycattle3d.html",
+          system: "HTML5"
+        },
+        {
+          name: "Capybara Clicker",
+          link: "https://frostcat224.github.io/fcmod/html/capybaraclicker.html",
+          system: "HTML5"
+        },
+        {
+          name: "Five Nights at Freddy's 4",
+          link: "https://frostcat224.github.io/fcmod/html/fnaf4.html",
+          system: "HTML5"
+        },
+        {
+          name: "Five Nights at Freddy's 4 Halloween",
+          link: "https://frostcat224.github.io/fcmod/html/fnaf4halloween.html",
+          system: "HTML5"
+        },
+        {
+          name: "Five Nights at Freddy's Ultimate Custom Night",
+          link: "https://frostcat224.github.io/fcmod/html/fnafucn.html",
+          system: "HTML5"
+        },
+        {
+          name: "Polytrack",
+          link: "https://frostcat224.github.io/fcmod/html/polytrack.html",
+          system: "HTML5"
+        },
+        {
+          name: "Slope",
+          link: "https://frostcat224.github.io/fcmod/html/slope.html",
+          system: "HTML5"
+        },
+        {
+          name: "Level Devil",
+          link: "https://frostcat224.github.io/fcmod/html/leveldevil.html",
+          system: "HTML5"
+        },
+        {
+          name: "Polytrack (Old)",
+          link: "https://frostcat224.github.io/fcmod/html/polytrackold.html",
+          system: "HTML5"
+        },
+        {
+          name: "Grindcraft",
+          link: "https://frostcat224.github.io/fcmod/html/grindcraft.html",
+          system: "HTML5"
+        },
+        {
+          name: "Time Shooter 2",
+          link: "https://frostcat224.github.io/fcmod/html/timeshooter2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Time Shooter 3",
+          link: "https://frostcat224.github.io/fcmod/html/timeshooter3.html",
+          system: "HTML5"
+        },
+        {
+          name: "Little Alchemy 2",
+          link: "https://frostcat224.github.io/fcmod/html/littlealchemy2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Block Blast",
+          link: "https://frostcat224.github.io/fcmod/html/blockblast.html",
+          system: "HTML5"
+        },
+        {
+          name: "Block Blast 2",
+          link: "https://frostcat224.github.io/fcmod/html/clblockblastv2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Fall Guys",
+          link: "https://frostcat224.github.io/fcmod/html/fallguys.html",
+          system: "HTML5"
+        },
+        {
+          name: "Game and Watch Collection",
+          link: "https://frostcat224.github.io/fcmod/html/gamewatchcollection.html",
+          system: "Game Boy/GBA/GBC"
+        },
+        {
+          name: "Snow Rider 3D",
+          link: "https://frostcat224.github.io/fcmod/html/snowrider3d.html",
+          system: "HTML5"
+        },
+        {
+          name: "Russian Buckshot Roulette",
+          link: "https://frostcat224.github.io/fcmod/html/russianbuckshotroulette.html",
+          system: "HTML5"
+        },
+        {
+          name: "Minecraft (Fuschia X)",
+          link: "https://frostcat224.github.io/fcmod/html/fuschiax.html",
+          system: "Eaglertek"
+        },
+        {
+          name: "Super Mario Bros.",
+          link: "https://frostcat224.github.io/fcmod/html/smb.html",
+          system: "NES"
+        },
+        {
+          name: "Super Mario Bros. 2",
+          link: "https://frostcat224.github.io/fcmod/html/smb2.html",
+          system: "NES"
+        },
+        {
+          name: "Scary Maze Game",
+          link: "https://frostcat224.github.io/fcmod/html/scarymazegame.html",
+          system: "Flash"
+        },
+        {
+          name: "Granny 2",
+          link: "https://frostcat224.github.io/fcmod/html/granny2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Granny 3",
+          link: "https://frostcat224.github.io/fcmod/html/granny3.html",
+          system: "HTML5"
+        },
+        {
+          name: "Granny Nightmare",
+          link: "https://frostcat224.github.io/fcmod/html/grannynightmare.html",
+          system: "HTML5"
+        },
+        {
+          name: "Pokémon: Mario Red",
+          link: "https://frostcat224.github.io/fcmod/html/pokemonsmred.html",
+          system: "Game Boy (ROM Hack)"
+        },
+        {
+          name: "Pokémon: Too Many Types 2",
+          link: "https://frostcat224.github.io/fcmod/html/pokemontmt2.html",
+          system: "Game Boy (ROM Hack)"
+        },
+        {
+          name: "Friday Night Funkin: Shaggy x Matt",
+          link: "https://frostcat224.github.io/fcmod/html/shaggyxmatt.html",
+          system: "HTML5"
+        },
+        {
+          name: "Five Nights at Freddy's",
+          link: "https://frostcat224.github.io/fcmod/html/fnaf.html",
+          system: "HTML5"
+        },
+        {
+          name: "Five Nights at Epstein's",
+          link: "https://frostcat224.github.io/fcmod/html/fnaepstein.html",
+          system: "HTML5"
+        },
+        {
+          name: "Find the Sammies",
+          link: "https://frostcat224.github.io/findthesammies/ftsv0.23.html",
+          system: "HTML5"
+        },
+        {
+          name: "Imposter",
+          link: "https://frostcat224.github.io/fcmod/html/amongus.html",
+          system: "HTML5"
+        },
+        {
+          name: "Deltarune",
+          link: "https://frostcat224.github.io/fcmod/html/deltarune.html",
+          system: "HTML5"
+        },
+        {
+          name: "A Dance of Fire and Ice",
+          link: "https://frostcat224.github.io/fcmod/html/adofai.html",
+          system: "HTML5"
+        },
+        {
+          name: "9007199254740992",
+          link: "https://frostcat224.github.io/fcmod/html/9007199254740992.html",
+          system: "HTML5"
+        },
+        {
+          name: "Lobotomy Dash",
+          link: "https://frostcat224.github.io/fcmod/html/lobotomydash.html",
+          system: "HTML5"
+        },
+        {
+          name: "Friday Night Funkin: Twiddlefinger",
+          link: "https://frostcat224.github.io/fcmod/html/twiddlefinger.html",
+          system: "HTML5"
+        },
+        {
+          name: "We Become What We Behold",
+          link: "https://frostcat224.github.io/fcmod/html/wbwwb.html",
+          system: "HTML5"
+        },
+        {
+          name: "Grow a Garden",
+          link: "https://frostcat224.github.io/fcmod/html/growagarden.html",
+          system: "HTML5"
+        },
+        {
+          name: "Uncanny Cat Golf",
+          link: "https://frostcat224.github.io/fcmod/html/uncannycatgolf.html",
+          system: "HTML5"
+        },
+        {
+          name: "Jelly Mario",
+          link: "https://frostcat224.github.io/fcmod/html/jellymario.html",
+          system: "HTML5"
+        },
+        {
+          name: "Final Fantasy",
+          link: "https://frostcat224.github.io/fcmod/html/ff.html",
+          system: "NES"
+        },
+        {
+          name: "Backrooms",
+          link: "https://frostcat224.github.io/fcmod/html/backrooms.html",
+          system: "Unity"
+        },
+        {
+          name: "Rooftop Snipers",
+          link: "https://frostcat224.github.io/fcmod/html/rooftopsnipers.html",
+          system: "HTML5"
+        },
+        {
+          name: "Rooftop Snipers 2",
+          link: "https://frostcat224.github.io/fcmod/html/rooftopsnipers2.html",
+          system: "HTML5"
+        },
+        {
+          name: "BFDIA 5B",
+          link: "https://frostcat224.github.io/fcmod/html/bfdia5b.html",
+          system: "Flash"
+        },
+        {
+          name: "Dumb Ways to Die",
+          link: "https://frostcat224.github.io/fcmod/html/dumbwaystodie.html",
+          system: "Flash"
+        },
+        {
+          name: "Bitlife",
+          link: "https://frostcat224.github.io/fcmod/html/bitlife.html",
+          system: "HTML5"
+        },
+        {
+          name: "Achievement Unlocked",
+          link: "https://frostcat224.github.io/fcmod/html/achievementunlocked.html",
+          system: "Flash"
+        },
+        {
+          name: "Donkey Kong",
+          link: "https://frostcat224.github.io/fcmod/html/donkeykong.html",
+          system: "NES"
+        },
+        {
+          name: "Castlevania",
+          link: "https://frostcat224.github.io/fcmod/html/castlevania.html",
+          system: "NES"
+        },
+        {
+          name: "Castlevania 2",
+          link: "https://frostcat224.github.io/fcmod/html/castlevania2.html",
+          system: "NES"
+        },
+        {
+          name: "Castlevania 3",
+          link: "https://frostcat224.github.io/fcmod/html/castlevania3.html",
+          system: "NES"
+        },
+        {
+          name: "Granny",
+          link: "https://frostcat224.github.io/fcmod/html/granny.html",
+          system: "HTML5"
+        },
+        {
+          name: "Idle Breakout",
+          link: "https://frostcat224.github.io/fcmod/html/idlebreakout.html",
+          system: "HTML5"
+        },
+        {
+          name: "Ice Dodo",
+          link: "https://frostcat224.github.io/fcmod/html/icedodo.html",
+          system: "HTML5"
+        },
+        {
+          name: "Nazi Zombies",
+          link: "https://frostcat224.github.io/fcmod/html/nazizombies.html",
+          system: "HTML5"
+        },
+        {
+          name: "Portal 2D",
+          link: "https://frostcat224.github.io/fcmod/html/portal2d.html",
+          system: "HTML5"
+        },
+        {
+          name: "Wordle",
+          link: "https://frostcat224.github.io/fcmod/html/wordle.html",
+          system: "HTML5"
+        },
+        {
+          name: "ʘ",
+          link: "https://frostcat224.github.io/fcmod/html/ʘ.html",
+          system: "HTML5"
+        },
+        {
+          name: "Moto x3m",
+          link: "https://frostcat224.github.io/fcmod/html/motox3m.html",
+          system: "HTML5"
+        },
+        {
+          name: "Moto x3m 2",
+          link: "https://frostcat224.github.io/fcmod/html/motox3m2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Moto x3m 3",
+          link: "https://frostcat224.github.io/fcmod/html/motox3m3.html",
+          system: "HTML5"
+        },
+        {
+          name: "Moto x3m Pool Party",
+          link: "https://frostcat224.github.io/fcmod/html/motox3mpoolparty.html",
+          system: "HTML5"
+        },
+        {
+          name: "Moto x3m Spooky Land",
+          link: "https://frostcat224.github.io/fcmod/html/motox3mspookyland.html",
+          system: "HTML5"
+        },
+        {
+          name: "Moto x3m Winter",
+          link: "https://frostcat224.github.io/fcmod/html/motox3mwinter.html",
+          system: "HTML5"
+        },
+        {
+          name: "Sandboxels",
+          link: "https://frostcat224.github.io/fcmod/html/clsandboxels.html",
+          system: "HTML5"
+        },
+        {
+          name: "Tung Tung Tung Sahur Obby",
+          link: "https://frostcat224.github.io/fcmod/html/tungtungtungsahurobby.html",
+          system: "HTML5"
+        },
+        {
+          name: "Binding of Isaac",
+          link: "https://frostcat224.github.io/fcmod/html/bindingofisaac.html",
+          system: "Flash"
+        },
+        {
+          name: "Tralalero Tralala Escape Tung Tung Tung Sahur",
+          link: "https://frostcat224.github.io/fcmod/html/tralalerotralalaescapetungtungtungsahur.html",
+          system: "HTML5"
+        },
+        {
+          name: "Bloons Tower Defense 5",
+          link: "https://frostcat224.github.io/fcmod/html/btd5.html",
+          system: "HTML5"
+        },
+        {
+          name: "Geometry Dash Subzero",
+          link: "https://frostcat224.github.io/fcmod/html/gdsubzero.html",
+          system: "HTML5"
+        },
+        {
+          name: "Appel",
+          link: "https://frostcat224.github.io/fcmod/html/appel.html",
+          system: "Scratch"
+        },
+        {
+          name: "Aapie RNG",
+          link: "https://frostcat224.github.io/fcmod/html/aapierng.html",
+          system: "Scratch"
+        },
+        {
+          name: "Super Mario Galaxy DS",
+          link: "https://frostcat224.github.io/fcmod/html/supermariogalaxy.html",
+          system: "DS"
+        },
+        {
+          name: "Pitfall!",
+          link: "https://frostcat224.github.io/fcmod/html/pitfall.html",
+          system: "Atari 2600"
+        },
+        {
+          name: "Paper Mario",
+          link: "https://frostcat224.github.io/fcmod/html/papermario.html",
+          system: "N64"
+        },
+        {
+          name: "Mario Kart DS",
+          link: "https://frostcat224.github.io/fcmod/html/mariokartds.html",
+          system: "DS"
+        },
+        {
+          name: "Mario Party DS",
+          link: "https://frostcat224.github.io/fcmod/html/mariopartyds.html",
+          system: "DS"
+        },
+        {
+          name: "Mario Party",
+          link: "https://frostcat224.github.io/fcmod/html/marioparty.html",
+          system: "N64"
+        },
+        {
+          name: "Mario Party 2",
+          link: "https://frostcat224.github.io/fcmod/html/marioparty2.html",
+          system: "N64"
+        },
+        {
+          name: "Lego Batman",
+          link: "https://frostcat224.github.io/fcmod/html/legobatman.html",
+          system: "DS"
+        },
+        {
+          name: "Happy Wheels",
+          link: "https://frostcat224.github.io/fcmod/html/happywheels.html",
+          system: "Flash"
+        },
+        {
+          name: "Get to the Top Although There Is No Top",
+          link: "https://frostcat224.github.io/fcmod/html/gtttatint.html",
+          system: "Flash"
+        },
+        {
+          name: "Unfair Mario",
+          link: "https://frostcat224.github.io/fcmod/html/unfairmario.html",
+          system: "Flash"
+        },
+        {
+          name: "Cat Mario",
+          link: "https://frostcat224.github.io/fcmod/html/catmario.html",
+          system: "Flash"
+        },
+        {
+          name: "N",
+          link: "https://frostcat224.github.io/fcmod/html/n.html",
+          system: "Flash"
+        },
+        {
+          name: "Click the Wawas",
+          link: "https://frostcat224.github.io/fcmod/html/clickthewawas.html",
+          system: "Scratch"
+        },
+        {
+          name: "Subway Surfers: Barcelona",
+          link: "https://frostcat224.github.io/fcmod/html/ssbarcelona.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Beijing",
+          link: "https://frostcat224.github.io/fcmod/html/ssbeijing.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Berlin",
+          link: "https://frostcat224.github.io/fcmod/html/ssberlin.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Bueno Aires",
+          link: "https://frostcat224.github.io/fcmod/html/ssbuenoaires.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Havana",
+          link: "https://frostcat224.github.io/fcmod/html/sshavana.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Houston",
+          link: "https://frostcat224.github.io/fcmod/html/sshouston.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Iceland",
+          link: "https://frostcat224.github.io/fcmod/html/ssiceland.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: London",
+          link: "https://frostcat224.github.io/fcmod/html/sslondon.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Mexico",
+          link: "https://frostcat224.github.io/fcmod/html/ssmexico.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Miami",
+          link: "https://frostcat224.github.io/fcmod/html/ssmiami.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Monaco",
+          link: "https://frostcat224.github.io/fcmod/html/ssmonaco.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: New Orleans",
+          link: "https://frostcat224.github.io/fcmod/html/ssneworleans.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: San Francisco",
+          link: "https://frostcat224.github.io/fcmod/html/sssanfrancisco.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: St. Petersburg",
+          link: "https://frostcat224.github.io/fcmod/html/ssstpetersburg.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Winter Holiday",
+          link: "https://frostcat224.github.io/fcmod/html/sswinterholiday.html",
+          system: "HTML5"
+        },
+        {
+          name: "Subway Surfers: Zurich",
+          link: "https://frostcat224.github.io/fcmod/html/sszurich.html",
+          system: "HTML5"
+        },
+        {
+          name: "Five Nights at Freddy's 2",
+          link: "https://frostcat224.github.io/fcmod/html/fnaf2.html",
+          system: "HTML5"
+        },
+        {
+          name: "Five Nights at Freddy's 3",
+          link: "https://frostcat224.github.io/fcmod/html/fnaf3.html",
+          system: "HTML5"
+        },
+      ];
+    
+
+      stuff.sort((a, b) => a.name.localeCompare(b.name));
+
+      const filtersDiv = document.getElementById("filters");
+      const systems = [...new Set(stuff.map(item => item.system))];
+
+      systems.forEach(system => {
+        const label = document.createElement("label");
+
+        label.innerHTML = `
+          <input type="checkbox" value="${system}" checked>
+          <span>${system}</span>
+        `;
+
+        filtersDiv.appendChild(label);
+      });
+
+      const stuffDiv = document.getElementById("stuff");
+      const searchInput = document.getElementById("search");
+      const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+function observeItems() {
+  document.querySelectorAll(".fade-in").forEach(el => {
+    observer.observe(el);
+  });
+}
+
+      function renderStuff() {
+  stuffDiv.innerHTML = "";
+
+  const search = searchInput.value.toLowerCase();
+
+  const enabledSystems = [
+    ...document.querySelectorAll(".filters input:checked")
+  ].map(box => box.value);
+
+  const filteredStuff = stuff.filter(item => {
+    const matchesSearch =
+      item.name.toLowerCase().includes(search);
+
+    const matchesSystem =
+      enabledSystems.includes(item.system);
+
+    return matchesSearch && matchesSystem;
+  });
+       
+
+  // Show game count
+  document.getElementById("gameCount").textContent =
+    `Games: ${filteredStuff.length} / ${stuff.length}`;
+
+  filteredStuff.forEach(item => {
+  const button = document.createElement("a");
+
+  button.className = "rainbow-button fade-in";
+  button.href = item.link;
+  button.target = "_blank";
+
+  button.textContent = item.name;
+
+  stuffDiv.appendChild(button);
+});
+
+/* Random button at bottom */
+const randomButton = document.createElement("a");
+
+randomButton.className = "random-game-button fade-in";
+randomButton.href = "#";
+randomButton.textContent = "RANDOM GAME";
+
+randomButton.onclick = (e) => {
+  e.preventDefault();
+
+  const randomGame =
+    filteredStuff[Math.floor(Math.random() * filteredStuff.length)];
+
+  window.open(randomGame.link, "_blank");
+};
+
+stuffDiv.appendChild(document.createElement("br"));
+stuffDiv.appendChild(document.createElement("br"));
+stuffDiv.appendChild(randomButton);
+
+observeItems();
+}
+       
+
+      searchInput.addEventListener("input", renderStuff);
+
+      document
+        .querySelectorAll(".filters input")
+        .forEach(box => {
+          box.addEventListener("change", renderStuff);
+        });
+
+      renderStuff();
+    </script>
+
+
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const message = document.getElementById("message").value;
+
+  window.location.href =
+    "mailto:jansenbenter@gmail.com?subject=Message&body=" +
+    encodeURIComponent(message);
+
+  document.getElementById("message").value = "";
+});
+</script>
+
+<details class="footer-info">
+  <summary>Info & Contact ▼</summary>
+
+  <p>
+    All these games’ rights go to their respective owners.
+    We do not claim to own any of these games.
+  </p>
+
+  <p>
+    Contact: jansenbenter@gmail.com
+  </p>
+
+  <p>
+    This website is Benter Jansen's property,
+    and he is responsible for it.
+    Benter's Github username: felinekrijgteentopkado-prog
+  </p>
+</details>
+    <p></p>
+    <details class="footer-info">
+  <summary>FAQ ▼</summary>
+
+  <p>
+    Q: Are there viruses on this site? A: No. 
+  </p>
+
+  <p>
+    Q: Are the games on this site unblocked on school Wi-Fi? A: Yes.
+  </p>
+
+  <p>
+    Q: Is this site great? A: Yes.
+  </p>
+</details>
+    </details>
+    <p></p>
+    <details class="footer-info">
+
+    <p> </p>
+        <p> If a game suddenly takes you to a different website when clicking on a logo, that is completely normal (especially on old Flash games), and all those websites are safe or deleted.</p>
+<p> This website is completely safe, all pages have been scanned by an anti-virus.</p>
+<div id="counter">Loading page views...</div>
+
+<script>
+fetch("https://api.counterapi.dev/v1/benterdecool/pageviews/up")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("counter").innerText =
+      "Visitors: " + data.count;
+  });
+</script>
+    
+
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9541708759623878"
+     data-ad-slot="YOUR_AD_SLOT_ID"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
